@@ -1,0 +1,47 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-cd-image;all/all
+Actions=mount-here;mount-to-desktop;mount-to;unmount;unmount-all;show-all
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Mount/Unmount
+X-KDE-Submenu[es]=Montar/Expulsar
+Encoding=UTF-8
+# FilePattern=*.iso;*.ISO;*.bin;*.BIN;*.nrg;*.NRG;*.mdf;*.MDF;*.img;*.IMG
+
+[Desktop Action mount-here]
+Name=Mount here
+Name[es]=Montar Aqui
+Icon=go-bottom
+Exec=/usr/share/kservices5/ServiceMenus/fuseisomenu.sh -m "." %f
+
+[Desktop Action mount-to-desktop]
+Name=Mount to Desktop
+Name[es]=Montar en el Escritorio
+Icon=start-here-kde
+Exec=/usr/share/kservices5/ServiceMenus/fuseisomenu.sh -m "${HOME}/Desktop" %F
+
+[Desktop Action mount-to]
+Name=Mount to...
+Name[es]=Montar en...
+Icon=mail-forwarded
+Exec=/usr/share/kservices5/ServiceMenus/fuseisomenu.sh -a -m "." %F
+
+[Desktop Action unmount]
+Name=Unmount
+Name[es]=Expulsar
+Icon=media-eject
+Exec=/usr/share/kservices5/ServiceMenus/fuseisomenu.sh -u %F
+
+[Desktop Action unmount-all]
+Name=Unmount All
+Name[es]=Expulsar Todo
+Icon=mail-reply-list
+Exec=/usr/share/kservices5/ServiceMenus/fuseisomenu.sh -x
+
+[Desktop Action show-all]
+Name=Show All Mounts
+Name[es]=Mostrar Archivos Montados
+Icon=dialog-layers
+Exec=/usr/share/kservices5/ServiceMenus/fuseisomenu.sh -s
