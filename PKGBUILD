@@ -35,8 +35,8 @@ build() {
 }
 
 package() {
-    install -dm755 "$pkgdir/usr/share/kservices5/ServiceMenus/"
-    cp -r ../fuseisomenu.* "$pkgdir/usr/share/kservices5/ServiceMenus"
+    install -Dm755 ../fuseisomenu.sh "$pkgdir/usr/share/kservices5/ServiceMenus/fuseisomenu.sh"
+    install -Dm755 ../fuseisomenu.desktop "$pkgdir/usr/share/kservices5/ServiceMenus/fuseisomenu.desktop"
   cd ${srcdir}/${pkgname}-20${pkgver//./}
   make DESTDIR=${pkgdir} install
 }
